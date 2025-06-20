@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; padding: 30px; line-height: 1.5; }
+        h1, h2 { color: #222; }
+        ul { margin-left: 20px; }
+    </style>
+</head>
+<body>
+    <h1>{{ name }}</h1>
+    <h3>{{ role }}</h3>
+    <p><strong>Experience:</strong> {{ experience }} years</p>
+    <h1>Resume Summary</h1>
+    <p>{{ summary }}</p>
+
+    <h2>Professional Bio</h2>
+    <p>{{ bio }}</p>
+
+    <h2>Key Skills</h2>
+    <ul>
+        {% for skill in skills %}
+        <li>{{ skill.strip() }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Experience Highlights</h2>
+    <ul>
+        {% for item in experiences %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
